@@ -5,16 +5,16 @@
 }
 
 .container {
- position: relative;
- width: 100vw;
- height: 100vh;
- background: linear-gradient(45deg,#0078d4,#40587C, #038387, #8764B8);
- background-size: 400% 400%;
- animation: movimiento 10s ease-in-out infinite; 
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #0078d4, #40587c, #038387, #8764b8);
+  background-size: 400% 400%;
+  animation: movimiento 10s ease-in-out infinite;
 }
 
 textarea {
-  box-shadow: 8px 8px 35px 0px rgb(0,0,0,75%);
+  box-shadow: 8px 8px 35px 0px rgb(0, 0, 0, 75%);
   border-radius: 20px;
 }
 
@@ -23,7 +23,7 @@ textarea {
   font-weight: 400;
   font-size: 32px;
   line-height: 150%;
-  background-color: rgba(0,0,0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   position: absolute;
   width: 42%;
   height: 60%;
@@ -89,7 +89,7 @@ textarea {
   line-height: 19px;
   text-align: center;
   color: #fff;
-  border: none; 
+  border: none;
 }
 
 .btn-desencriptar {
@@ -118,6 +118,17 @@ textarea {
   transition: 0.3s;
 }
 
+.copy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2px;
+  gap: 4px;
+  width: 5%;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
 .encriptado {
   display: flex;
   justify-content: center;
@@ -127,7 +138,7 @@ textarea {
   top: 5%;
   left: 60%;
   background: rgba(0, 0, 0, 0.1);
-  box-shadow: 8px 8px 35px 0px rgb(0,0,0,75%);
+  box-shadow: 8px 8px 35px 0px rgb(0, 0, 0, 75%);
   border-radius: 20px;
 }
 
@@ -173,9 +184,15 @@ textarea {
 /*Animation*/
 
 @keyframes movimiento {
-  0%{background-position: 0 50%;}
-  50%{background-position: 100% 50%;}
-  100%{background-position: 0 50%;}
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 /*Responsive*/
@@ -210,19 +227,29 @@ textarea {
   .botones {
     width: 100%;
     top: 70%;
-    left: 1%;
+    left: 8%;
   }
 
-  .btn-encriptar, 
+  .btn-encriptar,
   .btn-desencriptar {
-    width: 48%;
+    width: 40%;
     border-radius: 16px;
   }
 
-  .btn-encriptar:hover, 
+  .btn-encriptar:hover,
   .btn-desencriptar:hover {
     transform: scale(1.05, 1.05);
     transition: 0.3s;
+  }
+
+  .copy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2px;
+  gap: 2px;
+  width: auto;
+  margin-left: 5px;
   }
 
   .encriptado {

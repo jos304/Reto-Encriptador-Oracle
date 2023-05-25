@@ -50,3 +50,14 @@ function desencriptar() {
     swal("Upps!", "Debes ingresar un texto", "warning");
   }
 }
+
+function copiarAPortapapeles() {
+  let texto = document.getElementById("texto");
+  texto.select();
+  texto.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  let message = document.getElementById("message");
+
+  message.textContent = "Copiado en portapapeles";
+  setTimeout(() => message.innerHTML = "", 3000);
+}
